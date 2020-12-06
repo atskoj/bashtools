@@ -1,4 +1,4 @@
 #!/bin/bash
 while true; do
-xdotool getmouselocation
+	echo -e '\e[1A\e[K'$(xdotool getmouselocation)
 done
