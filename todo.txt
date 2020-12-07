@@ -1,4 +1,3 @@
 todo:
 - add README files for each folder
-- take input and --help for install.sh, allow for custom downloads of individual modules
-
+- create man file for bashtools and each module (found in /usr/local/man)
