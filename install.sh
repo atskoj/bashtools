@@ -21,20 +21,34 @@ if [ -n "$input" ]
 then
 	echo input received, not empty
 	case "$input" in
-		time)
-			echo "time install"
+		livetime)
+			echo "installing livetime"
+			chmod +x livetime/livetime.sh
+			cp livetime/livetime.sh /usr/local/bin/livetime
 			;;
 		cpuclock)
-			echo "cpuclock install"
+			echo "installing cpuclock"
+			echo "installing cpuclocklive"
+			chmod +x cpuclock/cpuclock.sh
+			cp cpuclock/cpuclock.sh /usr/local/bin/cpuclock
+			chmod +x cpuclock/cpuclocklive.sh
+			cp cpuclock/cpuclocklive.sh /usr/local/bin/cpuclocklive
 			;;
 		mouselocation)
-			echo "mouselocation install"
+			echo "installing mouselocation"
+			chmod +x mouselocation/mouselocation.sh
+			cp mouselocation/mouselocation.sh /usr/local/bin/mouselocation
 			;;
 		performance)
-			echo "performance install"
+			echo "installing performance"
+			chmod +x performance/performance.sh
+			cp performance/performance.sh /usr/local/bin/performance
 			;;
 		powersave)
-			echo "powersave install"
+			echo "installing powersave"
+			chmod +x powersave/powersave.sh
+			cp powersave/powersave.sh /usr/local/bin/powersave
+			
 			;;
 		*)
 			#else, return command not found
@@ -46,18 +60,21 @@ then
 fi
 
 #chmod +x cpuclock/cpuclock.sh
-#mv cpuclock/cpuclock.sh /usr/local/bin/cpuclock
+#cp cpuclock/cpuclock.sh /usr/local/bin/cpuclock
+
+#chmod +x cpuclock/cpuclocklive.sh
+#cp cpuclock/cpuclocklive.sh /usr/local/bin/cpuclocklive
 
 #chmod +x mouselocation/mouselocation.sh
-#mv mouselocation/mouselocation.sh /usr/local/bin/mouselocation
+#cp mouselocation/mouselocation.sh /usr/local/bin/mouselocation
 
 #chmod +x performance/performance.sh
-#mv performance/performance.sh /usr/local/bin/performance
+#cp performance/performance.sh /usr/local/bin/performance
 
 #chmod +x time/time.sh
-#mv time/time.sh /usr/local/bin/time
+#cp time/time.sh /usr/local/bin/time
 
 #chmod +x powersave/powersave.sh
-#mv powersave/powersave.sh /usr/local/bin/powersave
+#cp powersave/powersave.sh /usr/local/bin/powersave
 
 
