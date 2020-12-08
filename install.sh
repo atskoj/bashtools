@@ -14,7 +14,27 @@ echo $input
 
 if [ -z "$input" ]
 then 
-	echo full install
+	echo "installing all modules"
+
+	chmod +x cpuclock/cpuclock.sh
+	cp cpuclock/cpuclock.sh /usr/local/bin/cpuclock
+
+	chmod +x cpuclock/cpuclocklive.sh
+	cp cpuclock/cpuclocklive.sh /usr/local/bin/cpuclocklive
+
+	chmod +x mouselocation/mouselocation.sh
+	cp mouselocation/mouselocation.sh /usr/local/bin/mouselocation
+
+	chmod +x performance/performance.sh
+	cp performance/performance.sh /usr/local/bin/performance
+
+	chmod +x livetime/livetime.sh
+	cp livetime/livetime.sh /usr/local/bin/livetime
+
+	chmod +x powersave/powersave.sh
+	cp powersave/powersave.sh /usr/local/bin/powersave
+
+
 fi
 
 if [ -n "$input" ]
